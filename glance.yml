@@ -214,7 +214,7 @@ pages:
       - size: small
         widgets:
           - type: weather
-            location: 98664
+            location: 80202
             units: imperial
             hour-format: 12h # alternatively "24h"
             # Optionally hide the location from being displayed in the widget
@@ -236,24 +236,6 @@ pages:
 
           - type: releases
             cache: 1d
-            # Without authentication the Github API allows for up to 60 requests per hour. You can create a
-            # read-only token from your Github account settings and use it here to increase the limit.
-            # token: ...
             repositories:
               - glanceapp/glance
               - immich-app/immich
-
-  # Add more pages here:
-  # - name: Your page name
-  #   columns:
-  #     - size: small
-  #       widgets:
-  #         # Add widgets here
-
-  #     - size: full
-  #       widgets:
-  #         # Add widgets here
-
-  #     - size: small
-  #       widgets:
-  #         # Add widgets here
