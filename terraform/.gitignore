@@ -1,0 +1,23 @@
+# Terraform state
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Terraform plan outputs
+*.tfplan
+
+# Terraform variables
+.terraform/
+.terraform.lock.hcl
+
+# OS files
+.DS_Store
+
+# Editor files
+*.swp
+*.swo
+
+# Sensitive files
+terraform.tfvars
+*.auto.tfvars
+
