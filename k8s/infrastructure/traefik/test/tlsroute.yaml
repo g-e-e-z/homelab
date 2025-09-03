@@ -1,0 +1,17 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: nginx-service-ingressroute
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+spec:
+  tls:
+    secretName: letsencrypt-staging-certificate
+  routes:
+  - match: Host(`nginx.experteur.com`)
+    kind: Rule
+    services:
+      - name: nginx-test
+        port: 80
+        scheme: http
+

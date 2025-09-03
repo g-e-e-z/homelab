@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: letsencrypt-staging-certificate
+  namespace: default
+spec:
+  dnsNames:
+    - "*.experteur.com"
+  secretName: letsencrypt-staging-cert-tls
+  issuerRef:
+    kind: ClusterIssuer
+    name: letsencrypt-staging
