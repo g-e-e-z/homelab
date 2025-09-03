@@ -40,120 +40,6 @@ pages:
                 url: http://10.10.10.18:8123/
                 check-url: http://10.10.10.18:8123/
                 icon: di:home-assistant
-              #- title: Plex
-              #  url: https://plex.hopki.net/
-              #  check-url: http://10.0.0.100:32400
-              #  icon: di:plex
-              #  alt-status-codes:
-              #    - 401
-              #    - 403
-              #- title: Nextcloud
-              #  url: https://cloud.hopki.net/
-              #  check-url: http://10.0.0.104:11000
-              #  icon: di:nextcloud
-              #- title: Immich
-              #  url: https://immich.hopki.net/
-              #  check-url: http://10.0.0.104:2283
-              #  icon: di:immich
-              #- title: Vaultwarden
-              #  url: https://warden.hopki.net/
-              #  check-url: http://10.0.0.109:8000
-              #  icon: di:vaultwarden-light
-              #- title: Frigate
-              #  url: https://frigate.hopki.net/
-              #  check-url: http://10.0.0.107:5000
-              #  icon: di:frigate-light
-              #- title: Zigbee2MQTT
-              #  url: https://zigbee.hopki.net/
-              #  check-url: http://10.0.0.106:9442
-              #  icon: di:zigbee2mqtt
-              #- title: NGINX Proxy Manager
-              #  url: https://proxy.hopki.net/
-              #  check-url: http://10.0.0.102:81
-              #  icon: di:nginx
-              #- title: Docmost
-              #  url: https://doc.hopki.net/
-              #  check-url: http://10.0.0.104:3001
-              #  icon: di:notion
-              #- title: Hoarder
-              #  url: https://hoarder.hopki.net/
-              #  check-url: http://10.0.0.104:3000
-              #  icon: di:hoarder-light
-              #- title: Tautulli
-              #  url: https://tautulli.hopki.net/
-              #  check-url: http://10.0.0.201:8181
-              #  icon: di:tautulli
-              #- title: Jellyfin
-              #  url: https://jellyfin.hopki.net/
-              #  check-url: http://10.0.0.100:8096
-              #  icon: di:jellyfin
-              #- title: TeslaMate
-              #  url: https://tesla.hopki.net/
-              #  check-url: http://10.0.0.101:4000
-              #  icon: di:teslamate-light
-              #- title: Grafana
-              #  url: https://grafana.hopki.net/
-              #  check-url: http://10.0.0.101:3001
-              #  icon: di:grafana
-              #- title: OctoPrint
-              #  url: https://3d.hopki.net/
-              #  check-url: http://10.0.0.71
-              #  icon: di:octoprint
-              #- title: Proxmox Backup Server
-              #  url: https://backup.hopki.net/
-              #  check-url: https://10.0.0.251:8007
-              #  icon: di:proxmox-light
-              #  alt-status-codes:
-              #    - 401
-              #    - 403
-
-          #- type: monitor
-          #  cache: 1m
-          #  title: Servarr
-          #  sites:
-          #    - title: Overseerr
-          #      url: https://request.hopki.net
-          #      check-url: http://10.0.0.202:5055
-          #      icon: di:overseerr
-          #    - title: Radarr
-          #      url: https://arr.hopki.net/radarr
-          #      check-url: http://10.0.0.100:7878
-          #      icon: di:radarr
-          #    - title: Sonarr
-          #      url: https://arr.hopki.net/sonarr
-          #      check-url: http://10.0.0.100:8989
-          #      icon: di:sonarr
-          #    - title: Lidarr
-          #      url: https://arr.hopki.net/lidarr
-          #      check-url: http://10.0.0.100:8686
-          #      icon: di:lidarr
-          #    - title: Bazarr
-          #      url: https://arr.hopki.net/bazarr
-          #      check-url: http://10.0.0.100:6767
-          #      icon: di:bazarr
-          #    - title: Prowlarr
-          #      url: https://arr.hopki.net/prowlarr
-          #      check-url: http://10.0.0.100:9696
-          #      icon: di:prowlarr
-          #    - title: qBittorrent
-          #      url: https://torrent.hopki.net/
-          #      check-url: http://10.0.0.100:8080
-          #      icon: di:qbittorrent
-          #    - title: NZBGet
-          #      url: https://nzbget.hopki.net/
-          #      check-url: http://10.0.0.100:6789
-          #      icon: di:nzbget
-          #      alt-status-codes:
-          #        - 401
-          #        - 403
-          #    - title: File Browser
-          #      url: https://arrfiles.hopki.net/
-          #      icon: di:filebrowser
-          #    - title: Portainer
-          #      url: https://arr.hopki.net/
-          #      check-url: http://10.0.0.100:80
-          #      icon: di:portainer
-
       - size: small
         widgets:
           - type: dns-stats
@@ -167,8 +53,6 @@ pages:
             issues-limit: 3
             commits-limit: 3
   - name: Home
-    # Optionally, if you only have a single page you can hide the desktop navigation for a cleaner look
-    # hide-desktop-navigation: true
     columns:
       - size: small
         widgets:
@@ -217,12 +101,8 @@ pages:
             location: 80202
             units: imperial
             hour-format: 12h # alternatively "24h"
-            # Optionally hide the location from being displayed in the widget
-            # hide-location: true
 
           - type: markets
-            # The link to go to when clicking on the symbol in the UI,
-            # {SYMBOL} will be substituded with the symbol for each market
             symbol-link-template: https://www.tradingview.com/symbols/{SYMBOL}/news
             markets:
               - symbol: META
